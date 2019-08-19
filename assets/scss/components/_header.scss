@@ -1,0 +1,102 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('.././images/header/bg.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    &:before {
+        content: '';
+        @include absolute-all;
+        background-color: rgba($color-02, .7);
+    }
+    @include for-size(991) {
+        height: auto;
+    }
+    &__text {
+        #typed {
+            font: {
+                size: 6rem;
+                weight: 700;
+            }
+            color: $color-01;
+            &:after {
+                content: '|';
+                display: inline-block;
+                font-weight: 400;
+                animation: opacityTime .7s linear infinite;
+            }
+            @include for-size(1199) {
+                font-size: 4.5rem;
+            }
+            @include for-size(991) {
+                font-size: 3.5rem;
+            }
+            @include for-size(767) {
+                font-size: 2.5rem;
+            }
+            @include for-size(575) {
+                font-size: 2rem;
+            }
+            @include for-size(375) {
+                font-size: 1.6rem;
+            }
+        }
+        .text__description {
+            font: {
+                size: 1.8rem;
+                family: 'Playfair Display';
+                style: italic;
+                weight: 400;
+            }
+            color: $color-01;
+            @include for-size(1199) {
+                font-size: 1.6rem;
+            }
+            @include for-size(767) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    &__intro {
+        @include for-size(991) {
+            margin-top: 10rem;
+        }
+    }
+    & &__widgets {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 1rem;
+        @include for-size(1920) {
+            bottom: 5.5rem;
+        }
+        @include for-size(991) {
+            position: relative;
+            padding: 3rem 0;
+            bottom: auto;
+        }
+    }
+}
+
+.box-header {
+    color: $color-01;
+    & > &__icon {
+        .icon {
+            &:before {
+                font-size: 3.5rem;
+                font-weight: initial;
+                @include for-size(991) {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+    & &__description {
+        font: {
+            size: 1.3rem;
+            weight: 400;
+        }
+        color: $color-03;
+    }
+}
