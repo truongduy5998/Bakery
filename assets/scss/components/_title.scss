@@ -1,0 +1,33 @@
+.title {
+    &__block {
+        padding-bottom: 2.2rem;
+        margin-bottom: 5.9rem;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            @include transform(translateX(-50%));
+            width: 7rem;
+            height: .2rem;
+            display: inline-block;
+            background-color: $color-03;
+        }
+    }
+    &__block &__detail {
+        font: {
+            size: 3.6rem;
+            weight: 700;
+        }
+        margin-bottom: 1.7rem;
+    }
+    &__block &__description {
+        font: {
+            size: 1.8rem;
+            weight: 400;
+            family: 'Playfair Display';
+            style: italic;
+        }
+        line-height: 3rem;
+    }
+}

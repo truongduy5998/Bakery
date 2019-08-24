@@ -8,7 +8,6 @@ jQuery(function ($) {
     =======================================*/
 
     bakery.typedJS = function() {
-        // TypedJS
         let typed = new Typed('#typed', {
             stringsElement: '#typed-strings',
             loop: true,
@@ -20,6 +19,33 @@ jQuery(function ($) {
         });
     };
 
+    bakery.isotope = function() {
+        if( $('.demo__grid').length ) {
+            // Using Isotope
+            const $grid = $('.demo__grid').isotope({
+                itemSelector: '.box-demo',
+                layoutMode: 'fitRows',
+            });
+
+            $('.demo__filter .button-group').on('click', 'button', function() {
+                let filterValue = $(this).attr('data-filter');
+                $grid.isotope({ filter: filterValue });
+            });
+
+            $('.button-group > .button-item').on('click', function() {
+                $('.button-group > .button-item').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            // Using Hover Direction
+            $('.demo__grid > .box-demo').each(function() {
+                $(this).hoverdir({
+                    hoverDelay: 50,
+                    inverse : true
+                })
+            });
+        }
+    };
 
     /*======================================
     =            INIT FUNCTIONS            =
@@ -27,6 +53,7 @@ jQuery(function ($) {
 
     $(document).ready(function() {
         bakery.typedJS();
+        bakery.isotope();
     });
 
     /*=====  End of INIT FUNCTIONS  ======*/

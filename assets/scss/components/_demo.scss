@@ -1,0 +1,112 @@
+.demo {
+    &__filter {
+        padding: 3rem 0;
+        background-color: $color-05;
+        -webkit-box-shadow: 1px 1px 0 0 rgba($color-02, .03);
+        -moz-box-shadow: 1px 1px 0 0 rgba($color-02, .03);
+        box-shadow: 1px 1px 0 0 rgba($color-02, .03);
+    }
+    &__grid {
+        background-color: $color-07;
+    }
+}
+
+.button {
+    &-group > &-item {
+        font: {
+            size: 1.2rem;
+            weight: inherit;
+        }
+        border: none;
+        background-color: transparent;
+        line-height: 3rem;
+        padding: 0 1.5rem;
+        @include transition(all .3s ease);
+        &:hover, &.active {
+            color: $color-03;
+        }
+    }
+    &-group > &-item + &-item {
+        margin-left: 1.5rem;
+    }
+}
+
+
+
+.box-demo {
+    width: 25%;
+    padding: 4.2rem 1.5rem 2rem;
+    // -webkit-box-shadow: 1px 1px 24px 0 rgba($color-02, .13);
+    // -moz-box-shadow: 1px 1px 24px 0 rgba($color-02, .13);
+    // box-shadow: 1px 1px 24px 0 rgba($color-02, .13);
+    & > &__photo {
+        // width: 440px - height: 275px
+        position: relative;
+        overflow: hidden;
+        -webkit-box-shadow: 11px 11px 24px 0 rgba($color-02, .13);
+        -moz-box-shadow: 11px 11px 24px 0 rgba($color-02, .13);
+        box-shadow: 11px 11px 24px 0 rgba($color-02, .13);
+        @include transition(all .3s ease);
+        &:before {
+            content: '';
+            padding-top: 62.5%;
+            display: block;
+        }
+        .link {
+            @include absolute-all;
+        }
+        img {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+            @include transform(translateY(100%));
+            @include transition(all 3s cubic-bezier(.55, .14, .36, 1));
+        }
+
+        &:hover {
+            -webkit-box-shadow: 11px 11px 49px 0 rgba($color-08, .42);
+            -moz-box-shadow: 11px 11px 49px 0 rgba($color-08, .42);
+            box-shadow: 11px 11px 49px 0 rgba($color-08, .42);
+            img {
+                bottom: 0;
+                @include transform(translateY(0));
+            }
+        }
+    }
+    & &__hover {
+        position: absolute;
+        // top: 0; --> Sử dụng hover direction nên không cần
+        // left: 0; --> Sử dụng hover direction nên không cần
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color-02, .4);
+        opacity: 0;
+        @include transition(all .3s ease);
+        .hover {
+            font: {
+                size: 1.6rem;
+                weight: 500;
+            }
+            color: $color-04;
+            padding: 1.3rem 2rem;
+            background-color: $color-06;
+            border-radius: 3rem;
+            white-space: nowrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+        }
+    }
+    & > &__photo:hover &__hover {
+        opacity: 1;
+    }
+    & > &__title {
+        font: {
+            size: 1.2rem;
+            weight: 500;
+        }
+        line-height: 3rem;
+    }
+}
