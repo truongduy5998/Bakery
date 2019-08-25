@@ -1,0 +1,50 @@
+.box-feature {
+    background-color: $color-11;
+    & > &__logo {
+        // width: 233px - height: 207px
+        position: relative;
+        flex: 0 0 41%;
+        background-color: $color-01;
+        -webkit-box-shadow: 2rem 2rem 3.8rem 0 rgba($color-02, .08);
+        -moz-box-shadow: 2rem 2rem 3.8rem 0 rgba($color-02, .08);
+        box-shadow: 2rem 2rem 3.8rem 0 rgba($color-02, .08);
+        @include transition(all .3s ease);
+        &:before {
+            content: '';
+            display: block;
+            padding-top: 88.84%;
+        }
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+        }
+    }
+    &:hover > &__logo {
+        -webkit-box-shadow: 0 2rem .8rem 0 rgba($color-02, .2);
+        -moz-box-shadow: 0 2rem .8rem 0 rgba($color-02, .2);
+        box-shadow: 0 2rem .8rem 0 rgba($color-02, .2);
+    }
+    & > &__content {
+        flex-grow: 1;
+        padding: 0 4.8rem 0 2.4rem;
+    }
+    & &__title {
+        font: {
+            size: 2rem;
+            weight: 500;
+        }
+        color: $color-09;
+        line-height: 2.4rem;
+    }
+    & &__description {
+        font: {
+            size: 1.2rem;
+            weight: 400;
+        }
+        color: $color-10;
+        line-height: 2.2rem;
+        margin-top: .8rem;
+    }
+}
