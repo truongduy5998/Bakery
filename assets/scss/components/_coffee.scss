@@ -1,0 +1,83 @@
+.parallax-coffee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 57.5rem;
+    min-height: 30rem;
+    > [class^="coffee-"] {
+        position: absolute;
+    }
+    .coffee-main {
+        top: 0;
+        left: -3rem;
+    }
+    .coffee-sub {
+        &-01 {
+            top: 25%;
+            left: 38%;
+        }
+        &-02 {
+            top: 10%;
+            left: 38%;
+            max-width: 1.5rem;
+        }
+        &-03 {
+            top: 40%;
+            left: 64%;
+            max-width: 2rem;
+        }
+        &-04 {
+            top: 28%;
+            left: 74%;
+            max-width: 1rem;
+        }
+        &-05 {
+            top: 30%;
+            left: 70%;
+            max-width: 1rem;
+            @include transform(rotate(-50deg));
+        }
+        &-06 {
+            top: 60%;
+            left: 48%;
+            max-width: 1.5rem;
+        }
+        &-07 {
+            top: 20%;
+            left: 48%;
+            max-width: 1rem;
+        }
+        &-08 {
+            top: 8%;
+            left: 60%;
+        }
+        &-09 {
+            top: 27%;
+            left: 88%;
+        }
+        &-10 {
+            top: 23%;
+            left: 85%;
+        }
+        &-11 {
+            top: 60%;
+            left: 60%;
+        }
+        &-12 {
+            top: 35%;
+            left: 68%;
+            max-width: 2rem;
+            @include transform(rotate(45deg));
+        }
+        &-13 {
+            top: 44%;
+            left: 87%;
+            max-width: 1rem;
+        }
+        &-14 {
+            top: 51%;
+            left: 72%;
+            max-width: 1rem;
+        }
+    }
+}
