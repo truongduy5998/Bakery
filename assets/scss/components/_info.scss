@@ -1,0 +1,20 @@
+.info {
+    &__item {
+        > .icon {
+            &:before {
+                font-size: 1.6rem;
+            }
+        }
+        span {
+            display: inline-block;
+            font-weight: 400;
+            line-height: 2rem;
+        }
+    }
+    &__item + &__item {
+        margin-top: 2.8rem;
+    }
+    &__block.white-text {
+        color: $color-01;
+    }
+}

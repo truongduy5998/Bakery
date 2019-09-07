@@ -1,0 +1,13 @@
+.banner {
+    &__comp {
+        background-image: url('.././images/section-banner/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        &:before {
+            content: '';
+            @include absolute-all;
+            background-color: rgba($color-12, .7);
+        }
+    }
+}
