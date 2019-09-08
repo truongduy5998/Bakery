@@ -16,5 +16,10 @@
     }
     &__block.white-text {
         color: $color-01;
+        &.icon-color {
+            .icon {
+                color: $color-03;
+            }
+        }
     }
 }

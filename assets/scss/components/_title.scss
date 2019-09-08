@@ -38,6 +38,13 @@
             @include transform(translateX(0));
             background-color: $color-01;
         }
+        &.style-text {
+            &:after {
+                background-color: $color-03;
+            }
+        }
     }
-
+    &__block.style-text &__description {
+        color: $color-13;
+    }
 }

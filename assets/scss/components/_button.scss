@@ -1,0 +1,23 @@
+.button {
+    &__comp &__detail {
+        color: $color-01;
+        line-height: 3rem;
+        display: inline-block;
+        padding: 1rem 5rem;
+        text-transform: uppercase;
+        background-color: $color-03;
+        position: relative;
+        &:after {
+            content: '';
+            @include absolute-all;
+            border: 1px solid $color-03;
+            @include transform(translate(5px, 5px));
+            @include transition(all .3s ease);
+        }
+        &:hover {
+            &:after {
+                @include transform(translate(0, 0));
+            }
+        }
+    }
+}
