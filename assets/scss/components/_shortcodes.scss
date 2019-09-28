@@ -1,0 +1,59 @@
+.shortcodes {
+    &__background {
+        overflow: hidden;
+    }
+    &__background &__animation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -100%;
+        background-image: url('../images/section-shortcodes/bg.jpg');
+        background-size: 100%;
+        z-index: 20;
+        animation: translateYAnimation 15s infinite linear;
+        -webkit-animation: translateYAnimation 15s infinite linear;
+    }
+    &__comp &__quantity {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        font-size: 7.2rem;
+        color: $color-03;
+        padding: .8rem 6.7rem;
+        background-color: $color-01;
+        animation: bounceAnimation 1.5s infinite cubic-bezier(0,.2,.15,1) alternate;
+        -webkit-animation: bounceAnimation 1.5s infinite cubic-bezier(0,.2,.15,1) alternate;
+        z-index: 21;
+        .number {
+            display: inline-block;
+        }
+    }
+    &__comp &__button {
+        padding: 5rem 0;
+        background-color: $color-14;
+    }
+}
+
+@keyframes translateYAnimation {
+    100% {
+        @include transform(translateY(-50%));
+    }
+}
+@keyframes bounceAnimation {
+    0% {
+        margin-top: 5rem;
+        box-shadow: 13px 0 44px rgba($color-03, .2);
+        -webkit-box-shadow: 13px 0 44px rgba($color-03, .2);
+    }
+    50% {
+        box-shadow: 13px 0 44px rgba($color-03, .4);
+        -webkit-box-shadow: 13px 0 44px rgba($color-03, .4);
+    }
+    100% {
+        margin-top: 0;
+        box-shadow: 13px 0 44px rgba($color-03, .15);
+        -webkit-box-shadow: 13px 0 44px rgba($color-03, .15);
+    }
+}
