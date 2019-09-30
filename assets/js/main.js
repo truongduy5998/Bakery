@@ -47,6 +47,20 @@ jQuery(function ($) {
         }
     };
 
+    bakery.fancyBox = function() {
+        $('[data-fancybox="gallery"]').fancybox({
+            loop: true,
+            protect: true, // Bảo vệ hình ảnh khi nhấp chuột phải
+            buttons: [
+                "zoom",
+                "fullScreen",
+                "share",
+                "thumbs",
+                "close"
+            ]
+        });
+    };
+
     /*======================================
     =            INIT FUNCTIONS            =
     ======================================*/
@@ -54,6 +68,7 @@ jQuery(function ($) {
     $(document).ready(function() {
         bakery.typedJS();
         bakery.isotope();
+        bakery.fancyBox();
     });
 
     /*=====  End of INIT FUNCTIONS  ======*/

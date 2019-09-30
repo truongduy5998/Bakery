@@ -1,0 +1,27 @@
+.be {
+    &__comp {
+        padding: 10rem 0;
+    }
+    &__comp &__item + &__item {
+        margin-top: 15rem;
+    }
+    &__item &__image {
+        max-width: 50%;
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        
+        &.left {
+            left: 0;
+        }
+        &.right {
+            right: 0;
+        }
+        img {
+            max-width: 95%;
+            height: auto;
+            -webkit-box-shadow: 9px 9px 76px rgba($color-15, .1);
+            box-shadow: 9px 9px 76px rgba($color-15, .1);
+        }
+    }
+}
