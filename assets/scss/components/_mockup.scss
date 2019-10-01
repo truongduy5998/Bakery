@@ -1,0 +1,26 @@
+.mockup {
+    &__comp {
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        max-width: 1170px;
+        @include for-size(1200) {
+            @include transform(rotate3d(2, 1, 2, -65deg) translate(-9%, 42%));
+        }
+        @include for-size(1920) {
+            @include transform(rotate3d(2, 1, 2, -65deg) translate(-20%, 30%));
+        }
+        
+    }
+    &__item {
+        -webkit-box-shadow: -10px 15px 7px 0 rgba(0,0,0,.25);
+        -moz-box-shadow: -10px 15px 7px 0 rgba(0,0,0,.25);
+        box-shadow: -10px 15px 7px 0 rgba(0,0,0,.25);
+        @include transition(all .4s ease);
+        &:hover {
+            -webkit-box-shadow: -14px 20px 7px 0 rgba(0,0,0,.4);
+            -moz-box-shadow: -14px 20px 7px 0 rgba(0,0,0,.4);
+            box-shadow: -14px 20px 7px 0 rgba(0,0,0,.4);
+        }
+    }
+}

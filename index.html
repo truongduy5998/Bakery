@@ -8,11 +8,16 @@
     <title>Bakery</title>
 
     <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/animate.css" />
     <!-- <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css" /> -->
     <link rel="stylesheet" href="./assets/fonts/flaticon/flaticon.css" />
     <link rel="stylesheet" href="./assets/libs/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/libs/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./assets/libs/slick/slick.css" />
+    <link rel="stylesheet" href="./assets/libs/slick/slick-theme.css" />
     <link rel="stylesheet" href="./assets/css/styles.min.css" />
 
+    <script src="./assets/libs/hover-direction/modernizr.custom.97074.js"></script>
 </head>
 
 <body>
@@ -123,15 +128,891 @@
         </div>
     </header>
 
-    <div id="wrapper-content"></div>
+    <main id="wrapper-content">
+        <section class="section-demo" id="demo">
+            <div class="container">
+                <div class="title__block text-center position-relative pt-132">
+                    <h2 class="title__detail">Choose A Demo</h2>
+                    <p class="title__description">We provide perfect demo for all of business. Choose our demo and enjoy it!</p>
+                </div>
+            </div>
+            <div class="demo__comp">
+                <div class="demo__filter">
+                    <div class="container">
+                        <div class="button-group d-flex justify-content-center">
+                            <button class="button-item active" data-filter="*">ALL</button>
+                            <button class="button-item" data-filter=".multi-pages">MULTI PAGES</button>
+                            <button class="button-item" data-filter=".corporate">CORPORATE</button>
+                            <button class="button-item" data-filter=".one-page">ONE PAGE</button>
+                            <button class="button-item" data-filter=".portfolio">PORTFOLIO</button>
+                            <button class="button-item" data-filter=".blog">BLOG</button>
+                            <button class="button-item" data-filter=".e-commerce">E-COMMERCE</button>
+                            <button class="button-item" data-filter=".intros">INTROS</button>
+                            <button class="button-item" data-filter=".other">OTHER</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo__grid">
+                    <div class="box-demo corporate one-page other">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/01.jpg" alt="demo photo 01" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo intros blog portfolio">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/02.jpg" alt="demo photo 02" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo other intros e-commerce">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/03.jpg" alt="demo photo 03" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo blog e-commerce corporate">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/04.jpg" alt="demo photo 04" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo multi-pages other portfolio">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/05.jpg" alt="demo photo 05" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo corporate one-page intros">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/06.jpg" alt="demo photo 06" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo multi-pages e-commerce corporate">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/07.jpg" alt="demo photo 07" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo other blog portfolio">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/08.jpg" alt="demo photo 08" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo corporate blog">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/09.jpg" alt="demo photo 09" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo e-commerce portfolio">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/10.jpg" alt="demo photo 10" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo other">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/11.jpg" alt="demo photo 11" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo blog multi-pages">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/12.jpg" alt="demo photo 12" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo one-page multi-pages">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/13.jpg" alt="demo photo 13" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo portfolio other">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/14.jpg" alt="demo photo 14" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo corporate">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/15.jpg" alt="demo photo 15" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo multi-pages">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/16.jpg" alt="demo photo 16" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo e-commerce intros">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/17.jpg" alt="demo photo 17" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo portfolio corporate">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/18.jpg" alt="demo photo 18" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo one-page">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/19.jpg" alt="demo photo 19" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                    <div class="box-demo other intros">
+                        <figure class="box-demo__photo">
+                            <a href="#" class="link">
+                                <img src="./assets/images/section-demo/20.jpg" alt="demo photo 20" />
+                                <div class="box-demo__hover">
+                                    <p class="hover">
+                                        <i class="flaticon-thunder d-inline-block align-middle"></i>
+                                        <span class="d-inline-block align-middle">Live Preview</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </figure>
+                        <h3 class="box-demo__title text-uppercase text-center mt-5">V1. Home Orginal</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <footer id="footer"></footer>
+        <section class="section-features position-relative" id="features">
+            <div class="container">
+                <div class="title__block text-center position-relative pt-132">
+                    <h2 class="title__detail">The Easiest Way to Create</h2>
+                    <p class="title__description px-200">Build your business beautiful. Floury has a business demo for every need, and a beautiful website makes it much easier.</p>
+                </div>
+            </div>
+            <div class="feature__comp">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="box-feature d-flex align-items-center">
+                                <figure class="box-feature__logo">
+                                    <img class="img-fluid" src="./assets/images/section-features/features/01.png" alt="logo 01" />
+                                </figure>
+                                <div class="box-feature__content">
+                                    <h3 class="box-feature__title">Unlimited Color</h3>
+                                    <p class="box-feature__description">With color picker in admin panel, you can make your site more dynamic. You can choose a color from popup with one click or paste your code into field.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="box-feature d-flex align-items-center">
+                                <figure class="box-feature__logo">
+                                    <img class="img-fluid" src="./assets/images/section-features/features/02.png" alt="logo 02" />
+                                </figure>
+                                <div class="box-feature__content">
+                                    <h3 class="box-feature__title">Translation Ready</h3>
+                                    <p class="box-feature__description">mo & .po files are prepared in advanced, you can create a multilanguage site quickly & automatically.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-5">
+                            <div class="box-feature d-flex align-items-center">
+                                <figure class="box-feature__logo">
+                                    <img class="img-fluid" src="./assets/images/section-features/features/03.png" alt="logo 03" />
+                                </figure>
+                                <div class="box-feature__content">
+                                    <h3 class="box-feature__title">700+ Google Web Fonts</h3>
+                                    <p class="box-feature__description">We comes with 700+ web optimized google fonts.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-5">
+                            <div class="box-feature d-flex align-items-center">
+                                <figure class="box-feature__logo">
+                                    <img class="img-fluid" src="./assets/images/section-features/features/04.png" alt="logo 04" />
+                                </figure>
+                                <div class="box-feature__content">
+                                    <h3 class="box-feature__title">WooCommerce Ready</h3>
+                                    <p class="box-feature__description">Create full eCommerce sites easily with WooCommerce.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-5">
+                            <div class="box-feature d-flex align-items-center">
+                                <figure class="box-feature__logo">
+                                    <img class="img-fluid" src="./assets/images/section-features/features/05.png" alt="logo 05" />
+                                </figure>
+                                <div class="box-feature__content">
+                                    <h3 class="box-feature__title">Slider Revolution</h3>
+                                    <p class="box-feature__description">With color picker in admin panel, you can make your site more dynamic. You can choose a color from popup with one click or paste your code into field.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-5">
+                            <div class="box-feature d-flex align-items-center">
+                                <figure class="box-feature__logo">
+                                    <img class="img-fluid" src="./assets/images/section-features/features/06.png" alt="logo 06" />
+                                </figure>
+                                <div class="box-feature__content">
+                                    <h3 class="box-feature__title">Visual Composer</h3>
+                                    <p class="box-feature__description">mo & .po files are prepared in advanced, you can create a multilanguage site quickly & automatically.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-5">
+                            <div class="box-feature d-flex align-items-center">
+                                <figure class="box-feature__logo">
+                                    <img class="img-fluid" src="./assets/images/section-features/features/07.png" alt="logo 07" />
+                                </figure>
+                                <div class="box-feature__content">
+                                    <h3 class="box-feature__title">Documentation Guide</h3>
+                                    <p class="box-feature__description">We comes with 700+ web optimized google fonts.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-5">
+                            <div class="box-feature d-flex align-items-center">
+                                <figure class="box-feature__logo">
+                                    <img class="img-fluid" src="./assets/images/section-features/features/08.png" alt="logo 08" />
+                                </figure>
+                                <div class="box-feature__content">
+                                    <h3 class="box-feature__title">Superior Support</h3>
+                                    <p class="box-feature__description">Create full eCommerce sites easily with WooCommerce.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax-coffee">
+                <img class="coffee-main w-100 h-100" src="./assets/images/section-features/coffee/coffee.png" alt="coffee" data-parallax='{"x": 15, "y": 40, "smoothness": 30}' />
+                <img class="coffee-sub-01" src="./assets/images/section-features/coffee/coffee-01.png" alt="coffee"  data-parallax='{"x": 20, "y": 20, "smoothness": 30}' />
+                <img class="coffee-sub-02" src="./assets/images/section-features/coffee/coffee-01.png" alt="coffee" data-parallax='{"x": 30, "y": -10}' />
+                <img class="coffee-sub-03" src="./assets/images/section-features/coffee/coffee-02.png" alt="coffee" data-parallax='{"x": 30, "y": 20, "smoothness": 10}' />
+                <img class="coffee-sub-04" src="./assets/images/section-features/coffee/coffee-02.png" alt="coffee" data-parallax='{"x": 10, "y": 30, "smoothness": 10}' />
+                <img class="coffee-sub-05" src="./assets/images/section-features/coffee/coffee-02.png" alt="coffee" data-parallax='{"x": 50, "y": 10, "smoothness": 20}' />
+                <img class="coffee-sub-06" src="./assets/images/section-features/coffee/coffee-03.png" alt="coffee" data-parallax='{"x": 5, "y": 50, "smoothness": 20}' />
+                <img class="coffee-sub-07" src="./assets/images/section-features/coffee/coffee-03.png" alt="coffee" data-parallax='{"z": 5, "y": -20, "smoothness": 20}' />
+                <img class="coffee-sub-08" src="./assets/images/section-features/coffee/coffee-04.png" alt="coffee" data-parallax='{"z": 5, "y": 20, "smoothness": 10}' />
+                <img class="coffee-sub-09" src="./assets/images/section-features/coffee/coffee-04.png" alt="coffee" data-parallax='{"x": 35, "y": 35, "smoothness": 20}' />
+                <img class="coffee-sub-10" src="./assets/images/section-features/coffee/coffee-04.png" alt="coffee" data-parallax='{"x": 15, "y": -20, "smoothness": 10}' />
+                <img class="coffee-sub-11" src="./assets/images/section-features/coffee/coffee-07.png" alt="coffee" data-parallax='{"x": 40, "z": 20, "smoothness": 10}' />
+                <img class="coffee-sub-12" src="./assets/images/section-features/coffee/coffee-06.png" alt="coffee" data-parallax='{"x": 50, "y": 60, "smoothness": 20}' />
+                <img class="coffee-sub-13" src="./assets/images/section-features/coffee/coffee-03.png" alt="coffee" data-parallax='{"x": 25, "y": 60, "smoothness": 10}' />
+                <img class="coffee-sub-14" src="./assets/images/section-features/coffee/coffee-03.png" alt="coffee" data-parallax='{"z": 5, "y": 30, "smoothness": 20}' />
+            </div>
+        </section>
+
+        <section class="section-banner mt-137" id="banner">
+            <div class="banner__comp py-134 position-relative">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="intro__block">
+                                <div class="title__block white-style left-border bg-border position-relative">
+                                    <h2 class="title__detail">Beautiful Business Demos for All Your Needs</h2>
+                                    <p class="title__description">Build your business beautiful. Floury has a business demo for every need, and a beautiful website makes it much easier.</p>
+                                </div>
+                                <div class="info__block">
+                                    <ul class="info__list">
+                                        <li class="info__item d-flex align-items-center white-text">
+                                            <i class="icon flaticon-tick"></i>
+                                            <span class="pl-4">Fleaxible custom layout</span>
+                                        </li>
+                                        <li class="info__item d-flex align-items-center white-text">
+                                            <i class="icon flaticon-tick"></i>
+                                            <span class="pl-4">Beautiful demos with creative elements</span>
+                                        </li>
+                                        <li class="info__item d-flex align-items-center white-text">
+                                            <i class="icon flaticon-tick"></i>
+                                            <span class="pl-4">Innovative, powerful & highly useful features</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mockup__comp">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2dot4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <figure class="mockup__item">
+                                        <img class="img-fluid" src="./assets/images/section-banner/01.jpg" alt="mockup" />
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2dot4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <figure class="mockup__item">
+                                        <img class="img-fluid" src="./assets/images/section-banner/02.jpg" alt="mockup" />
+                                    </figure>
+                                </div>
+                                <div class="col-12">
+                                    <figure class="mockup__item mt-5">
+                                        <img class="img-fluid" src="./assets/images/section-banner/03.jpg" alt="mockup" />
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2dot4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <figure class="mockup__item">
+                                        <img class="img-fluid" src="./assets/images/section-banner/04.jpg" alt="mockup" />
+                                    </figure>
+                                </div>
+                                <div class="col-12">
+                                    <figure class="mockup__item mt-5">
+                                        <img class="img-fluid" src="./assets/images/section-banner/05.jpg" alt="mockup" />
+                                    </figure>
+                                </div>
+                                <div class="col-12">
+                                    <figure class="mockup__item mt-5">
+                                        <img class="img-fluid" src="./assets/images/section-banner/06.jpg" alt="mockup" />
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2dot4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <figure class="mockup__item">
+                                        <img class="img-fluid" src="./assets/images/section-banner/07.jpg" alt="mockup" />
+                                    </figure>
+                                </div>
+                                <div class="col-12">
+                                    <figure class="mockup__item mt-5">
+                                        <img class="img-fluid" src="./assets/images/section-banner/08.jpg" alt="mockup" />
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2dot4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <figure class="mockup__item">
+                                        <img class="img-fluid" src="./assets/images/section-banner/09.jpg" alt="mockup" />
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-key-features pb-70" id="key-features">
+            <div class="container">
+                <div class="title__block text-center position-relative pt-132">
+                    <h2 class="title__detail">Key Features</h2>
+                    <p class="title__description px-200">Build your business beautiful. Floury has a business demo for every need, and a beautiful website makes it much easier.</p>
+                </div>
+
+                <div class="key__comp">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="key__item">
+                                <div class="key__icon">
+                                    <i class="icon flaticon-screen"></i>
+                                </div>
+                                <div class="key__line"></div>
+                                <p class="key__title">+90 Shortcodes</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="key__item">
+                                <div class="key__icon">
+                                    <i class="icon flaticon-hand"></i>
+                                </div>
+                                <div class="key__line"></div>
+                                <p class="key__title">ONE-CLICK IMPORT</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="key__item">
+                                <div class="key__icon">
+                                    <i class="icon flaticon-share"></i>
+                                </div>
+                                <div class="key__line"></div>
+                                <p class="key__title">SOCIAL MEDIA INTEGRATION</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="key__item">
+                                <div class="key__icon">
+                                    <i class="icon flaticon-monitor"></i>
+                                </div>
+                                <div class="key__line"></div>
+                                <p class="key__title">FULLY RESPONSIVE</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mt-5">
+                            <div class="key__item">
+                                <div class="key__icon">
+                                    <i class="icon flaticon-bag"></i>
+                                </div>
+                                <div class="key__line"></div>
+                                <p class="key__title">Woocommerce</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mt-5">
+                            <div class="key__item">
+                                <div class="key__icon">
+                                    <i class="icon flaticon-work"></i>
+                                </div>
+                                <div class="key__line"></div>
+                                <p class="key__title">Fully Optimizied for seo</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mt-5">
+                            <div class="key__item">
+                                <div class="key__icon">
+                                    <i class="icon flaticon-flash"></i>
+                                </div>
+                                <div class="key__line"></div>
+                                <p class="key__title">AMAZING PARALLAX EFFECT</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mt-5">
+                            <div class="key__item">
+                                <div class="key__icon">
+                                    <i class="icon flaticon-heart"></i>
+                                </div>
+                                <div class="key__line"></div>
+                                <p class="key__title">Beautiful icon pack</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mt-5">
+                            <div class="key__item">
+                                <div class="key__icon">
+                                    <i class="icon flaticon-edit"></i>
+                                </div>
+                                <div class="key__line"></div>
+                                <p class="key__title">700+ WEB OPTIMIZED GOOGLE FONTS</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mt-5">
+                            <div class="key__item">
+                                <div class="key__icon">
+                                    <i class="icon flaticon-map"></i>
+                                </div>
+                                <div class="key__line"></div>
+                                <p class="key__title">EASILY TRANSLATion</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mt-5">
+                            <div class="key__item">
+                                <div class="key__icon">
+                                    <i class="icon flaticon-settings"></i>
+                                </div>
+                                <div class="key__line"></div>
+                                <p class="key__title">COMPLETELY FREE PLUGINS</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mt-5">
+                            <div class="key__item">
+                                <div class="key__icon">
+                                    <i class="icon flaticon-livesaver-support"></i>
+                                </div>
+                                <div class="key__line"></div>
+                                <p class="key__title">Fast & Friendly Support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-woo" id="woo">
+            <div class="woo__comp position-relative py-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 offset-6">
+                            <div class="intro__block">
+                                <div class="title__block white-style left-border position-relative">
+                                    <h2 class="title__detail">WooCommerce Ready</h2>
+                                    <p class="title__description set-color">Build your business beautiful. Floury has a business demo for every need, and a beautiful website makes it much easier.</p>
+                                </div>
+                                <div class="info__block">
+                                    <ul class="info__list">
+                                        <li class="info__item d-flex align-items-center white-text icon-color">
+                                            <i class="icon flaticon-tick"></i>
+                                            <span class="pl-4">Fleaxible custom layout</span>
+                                        </li>
+                                        <li class="info__item d-flex align-items-center white-text icon-color">
+                                            <i class="icon flaticon-tick"></i>
+                                            <span class="pl-4">Beautiful demos with creative elements</span>
+                                        </li>
+                                        <li class="info__item d-flex align-items-center white-text icon-color">
+                                            <i class="icon flaticon-tick"></i>
+                                            <span class="pl-4">Innovative, powerful & highly useful features</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="button__comp mt-50">
+                                    <a href="#" class="button__detail">View demo</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <figure class="woo__picture">
+                    <img class="img-fluid" src="./assets/images/section-woo/lap-mac.png" alt="woo picture" />
+                </figure>
+            </div>
+        </section>
+
+        <section class="section-shortcodes" id="shortcodes">
+            <div class="container">
+                <div class="title__block text-center position-relative pt-132">
+                    <h2 class="title__detail">200+ Shortcodes</h2>
+                    <p class="title__description px-200">Build your business beautiful. Floury has a business demo for every need, and a beautiful website makes it much easier.</p>
+                </div>
+            </div>
+            <div class="shortcodes__comp position-relative">
+                <div class="shortcodes__background position-relative">
+                    <img class="img-fluid" src="./assets/images/section-shortcodes/bg.jpg" alt="shortcodes bg" />
+                    <div class="shortcodes__animation"></div>
+                    <div class="shortcodes__quantity">
+                        <span class="number">200+</span>
+                    </div>
+                </div>
+                <div class="shortcodes__button">
+                    <div class="button__comp text-center">
+                        <a href="#" class="button__detail">All shortcodes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-be" id="be">
+            <div class="be__comp">
+                <div class="be__item position-relative">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="intro__block">
+                                    <div class="title__block position-relative left-border">
+                                        <h2 class="title__detail">No More Backend Editor</h2>
+                                        <p class="title__description">Build your business beautiful. Floury has a business demo for every need, and a beautiful website makes it much easier.</p>
+                                    </div>
+                                    <div class="info__block white-text icon-color">
+                                        <ul class="info__list">
+                                            <li class="info__item d-flex align-items-center icon-color">
+                                                <i class="icon flaticon-tick"></i>
+                                                <span class="pl-4">Fleaxible custom layout</span>
+                                            </li>
+                                            <li class="info__item d-flex align-items-center icon-color">
+                                                <i class="icon flaticon-tick"></i>
+                                                <span class="pl-4">Beautiful demos with creative elements</span>
+                                            </li>
+                                            <li class="info__item d-flex align-items-center icon-color">
+                                                <i class="icon flaticon-tick"></i>
+                                                <span class="pl-4">Innovative, powerful & highly useful features</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="button__comp mt-50">
+                                        <a href="#" class="button__detail">View demo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="be__image right text-right">
+                        <a data-fancybox="gallery" href="./assets/images/section-be-features/01.jpg">
+                            <img src="./assets/images/section-be-features/01.jpg" alt="be features" />
+                        </a>
+                    </figure>
+                </div>
+                <div class="be__item position-relative">
+                    <figure class="be__image left">
+                        <a data-fancybox="gallery" href="./assets/images/section-be-features/02.jpg">
+                            <img src="./assets/images/section-be-features/02.jpg" alt="be features" />
+                        </a>
+                    </figure>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 offset-6">
+                                <div class="intro__block">
+                                    <div class="title__block position-relative left-border">
+                                        <h2 class="title__detail">Truly Unlimited Floury Layouts</h2>
+                                        <p class="title__description">Build your business beautiful. Floury has a business demo for every need, and a beautiful website makes it much easier.</p>
+                                    </div>
+                                    <div class="info__block white-text icon-color">
+                                        <ul class="info__list">
+                                            <li class="info__item d-flex align-items-center icon-color">
+                                                <i class="icon flaticon-tick"></i>
+                                                <span class="pl-4">Fleaxible custom layout</span>
+                                            </li>
+                                            <li class="info__item d-flex align-items-center icon-color">
+                                                <i class="icon flaticon-tick"></i>
+                                                <span class="pl-4">Beautiful demos with creative elements</span>
+                                            </li>
+                                            <li class="info__item d-flex align-items-center icon-color">
+                                                <i class="icon flaticon-tick"></i>
+                                                <span class="pl-4">Innovative, powerful & highly useful features</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="button__comp mt-50">
+                                        <a href="#" class="button__detail">View demo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-testimonial">
+            <div class="testimonial__comp">
+                <div class="container">
+                    <div class="testimonial__slider">
+                        <div class="testimonial__item position-relative text-center">
+                            <div class="testimonial__icon" data-delay-in="0.5"  data-animation-in="bounceInDown" data-delay-out="0" data-animation-out="pulse infinite">
+                                <i class="icon flaticon-left-quote"></i>
+                            </div>
+                            <div class="testimonial__text py-5" data-delay-in="1.5" data-animation-in="bounceInUp">
+                                <p>It has been the best theme I’ve bought here in envato give them 5 stars for support on a Sunday but in a nutshell helped me… and my clients are happy</p>
+                            </div>
+                            <div class="testimonial__rating" data-delay-in="1"  data-animation-in="bounceInRight">
+                                <span class="rating-not-selected">
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                </span>
+                                <span class="rating-selected" style="width: 100%">
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                </span>
+                            </div>
+                            <div class="testimonial__name" data-delay-in="1" data-animation-in="zoomInUp">Customer Support</div>
+                        </div>
+                        <div class="testimonial__item position-relative text-center">
+                            <div class="testimonial__icon"  data-animation-in="bounceInRight" data-delay-out="0" data-animation-out="pulse infinite">
+                                <i class="icon flaticon-left-quote"></i>
+                            </div>
+                            <div class="testimonial__text py-5" data-animation-in="bounceInLeft">
+                                <p>It has been the best theme I’ve bought here in envato give them 5 stars for support on a Sunday but in a nutshell helped me… and my clients are happy</p>
+                            </div>
+                            <div class="testimonial__rating" data-delay-in="1"  data-animation-in="bounceInLeft">
+                                <span class="rating-not-selected">
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                </span>
+                                <span class="rating-selected" style="width: 50%">
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                    <i class="icon flaticon-star"></i>
+                                </span>
+                            </div>
+                            <div class="testimonial__name" data-delay-in="1"  data-animation-in="zoomInRight">Customer Support 1</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer position-relative">
+            <div class="container">
+                <div class="footer__block d-flex justify-content-center align-items-center">
+                    <div class="footer__comp text-center">
+                        <h2 class="footer__title">Create Your Perfect Website</h2>
+                        <div class="button__comp">
+                            <a href="#" class="button__detail size-big">Purchase theme now</a>
+                        </div>
+                        <p class="footer__description">Make with Love by <a href="#" class="link">SWLABs</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="./assets/libs/jquery/jquery-3.4.1.min.js"></script>
     <script src="./assets/libs/bootstrap/js/popper.min.js"></script>
     <script src="./assets/libs/bootstrap/js/bootstrap.min.js"></script>
     <script src="./assets/libs/typedjs/typed.min.js"></script>
+    <script src="./assets/libs/isotope/isotope.pkgd.min.js"></script>
+    <script src="./assets/libs/hover-direction/jquery.hoverdir.js"></script>
+    <script src="./assets/libs/jquery-parallax-scroll/jquery.parallax-scroll.js"></script>
+    <script src="./assets/libs/fancybox/jquery.fancybox.min.js"></script>
+    <script src="./assets/libs/slick/slick.min.js"></script>
+    <script src="./assets/js/slick-animation.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 

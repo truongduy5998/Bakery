@@ -1,0 +1,18 @@
+.woo {
+    &__comp {
+        background-image: url('.././images/section-woo/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        &:before {
+            content: '';
+            @include absolute-all;
+            background-color: rgba($color-02, .5);
+        }
+    }
+    &__comp &__picture {
+        position: absolute;
+        bottom: -5rem;
+        left: 0;
+        max-width: 50%;
+    }
+}
