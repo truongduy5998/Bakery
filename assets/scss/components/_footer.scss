@@ -1,0 +1,38 @@
+.footer {
+    background-image: url('../images/footer/bg.jpg');
+    background-size: cover;
+    &:before {
+        content: '';
+        position: absolute;
+        @include absolute-all;
+        background-color: rgba($color-02, .6);
+    }
+    &__block {
+        height: 100vh;
+        z-index: 10;
+        position: relative;
+    }
+    &__comp &__title {
+        font: {
+            size: 7.2rem;
+            weight: 700;
+            family: 'Playfair Display'
+        }
+        color: $color-01;
+    }
+    .button__comp {
+        padding: 5rem 0;
+    }
+    &__comp &__description {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        color: $color-01;
+        .link {
+            color: $color-03;
+            display: inline-block;
+            &:hover {
+                color: $color-17;
+            }
+        }
+    }
+}

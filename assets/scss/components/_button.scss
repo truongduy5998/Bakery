@@ -7,17 +7,40 @@
         text-transform: uppercase;
         background-color: $color-03;
         position: relative;
+        font-weight: 500;
+        z-index: 10;
         &:after {
             content: '';
             @include absolute-all;
+        }
+        // &:before {
+        //     z-index: -1;
+        //     background-color: $color-04;
+        //     -webkit-transform-origin: center center;
+        //     transform-origin: center center;
+        //     @include transform(scale(0, 1));
+        //     @include transition(all 0.4s cubic-bezier(0.4, 0, 0.2, 1));
+        // }
+        &:after {
             border: 1px solid $color-03;
             @include transform(translate(5px, 5px));
             @include transition(all .3s ease);
         }
         &:hover {
+            // &:before {
+            //     @include transform(scale(1, 1));
+            // }
             &:after {
+                // border-color: $color-04;
                 @include transform(translate(0, 0));
             }
+        }
+        &.size-big {
+            font: {
+                size: 2.4rem;
+                weight: 600;
+            }
+            padding: 2.5rem 5rem;
         }
     }
 }
