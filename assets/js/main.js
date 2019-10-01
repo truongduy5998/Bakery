@@ -61,6 +61,24 @@ jQuery(function ($) {
         });
     };
 
+    bakery.testimonialSlider = function() {
+        if( $('.testimonial__slider') ) {
+            $('.testimonial__slider').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear',
+                prevArrow: '<div class="prev"><i class="icon flaticon-left-arrow"></i></div>',
+                nextArrow: '<div class="next"><i class="icon flaticon-right-arrow"></i></div>'
+            });
+            $('.testimonial__slider').slickAnimation();
+        }
+    };
+
     /*======================================
     =            INIT FUNCTIONS            =
     ======================================*/
@@ -69,6 +87,7 @@ jQuery(function ($) {
         bakery.typedJS();
         bakery.isotope();
         bakery.fancyBox();
+        bakery.testimonialSlider();
     });
 
     /*=====  End of INIT FUNCTIONS  ======*/

@@ -1,0 +1,117 @@
+.testimonial {
+    &__comp {
+        padding: 12.9rem 0; // 1920
+        background-image: url('../images/section-testimonial/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__slider {
+        padding: 0 14rem;
+        .slick-list {
+            padding-bottom: 1rem !important;
+        }
+        .slick-arrow {
+            display: inline-block;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(calc(-50% - .5rem)));
+            &.prev {
+                left: 5rem;
+            }
+            &.next {
+                right: 5rem;
+            }
+            .icon {
+                height: 5rem;
+                width: 5rem;
+                line-height: 5rem;
+                text-align: center;
+                background-color: transparent;
+                color: $color-03;
+                border: 2px solid $color-03;
+                border-radius: 50%;
+                @include transition(all .4s ease);
+                cursor: pointer;
+                &:before {
+                    font-size: 2.5rem;
+                }
+            }
+            &:hover {
+                .icon {
+                    color: $color-01;
+                    background-color: $color-03;
+                }
+            }
+        }
+    }
+    &__item {
+        color: $color-16;
+        border: 1px solid $color-03;
+        border-bottom: none;
+        padding: 1.5rem 2.5rem;
+        position: relative;
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 30%;
+            height: 1px;
+            background-color: $color-03;
+        }
+        &:before {
+            left: 0;
+        }
+        &:after {
+            right: 0;
+        }
+    }
+    &__icon {
+        .icon {
+            &:before {
+                font-size: 5.5rem;
+            }
+        }
+    }
+    &__text {
+        font: {
+            size: 2.4rem;
+            weight: 400;
+            family: 'Playfair Display';
+            style: italic;
+        }
+    }
+    &__rating {
+        display: inline-block;
+        position: relative;
+        line-height: 1;
+        > [class^="rating-"] {
+            display: inline-block;
+        }
+        .icon + .icon {
+            margin-left: .5rem;
+        }
+        .icon {
+            &:before {
+                font-size: 1.8rem;
+            }
+        }
+        .rating-selected {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            color: $color-17;
+        }
+    }
+    &__name {
+        text-transform: uppercase;
+        position: absolute;
+        line-height: 1;
+        left: 50%;
+        bottom: 0;
+        @include transform(translate(-50%, 50%));
+    }
+}
